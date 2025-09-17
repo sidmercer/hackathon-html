@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File System Notes</title>
+</head>
+<body>
+ <nav>  
+        <a href="../index.html">Home</a> |
+        <a href="pages/about.html">About Us</a>
+    </nav>
+    <hr>
+  <h1>File Path System</h1>
+  
+  <p><a href="../index.html">← Back to Home</a></p>
+    <p>Understanding how file paths work is crucial for web development. This guide explains the difference between relative and absolute file paths, and how to use them effectively.</p>
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#principle">Step 1: The First Principle</a></li>
+    <li><a href="#problem">Step 2: The Core Problem</a></li>
+    <li><a href="#relative">Relative File Paths</a></li>
+    <li><a href="#absolute">Absolute File Paths</a></li>
+    <li><a href="#summary">Summary / Rules of Thumb</a></li>
+    <li><a href="#windows">Absolute Path in Windows</a></li>
+    <li><a href="#macos">Absolute Path in macOS / Linux</a></li>
+    <li><a href="#differences">Summary of Key Differences</a></li>
+  </ul>
+
+  <hr>
+
+  <h2 id="principle">Step 1: The First Principle (The Fundamental Truth)</h2>
+  <p>
+    The most fundamental truth is this: <b>A website is not one single file.</b> 
+    It's a collection of different files (HTML, CSS, JavaScript, images, videos, fonts) that all need to work together. 
+    These files are organized into folders, just like documents on your computer.
+  </p>
+
+  <h2 id="problem">Step 2: The Core Problem</h2>
+  <p>
+    If your <code>index.html</code> file needs to display an image named <code>logo.png</code>, how does the HTML file tell the browser where to find it? 
+    A file path is that address.
+  </p>
+
+  <h2 id="relative">A) Relative File Paths</h2>
+  <p>
+    A relative file path gives directions to a file starting from the location of the file you are currently in. 
+    You will use this 99% of the time.
+  </p>
+
+  <pre>
+my-website/
+├── index.html
+├── about.html
+│
+├── images/
+│   ├── logo.png
+│   └── hero.jpg
+│
+└── pages/
+    ├── contact.html
+    └── terms.html
+  </pre>
+
+  <h3>Scenario 1: Same Folder</h3>
+  <pre>
+&lt;!-- inside index.html --&gt;
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+  </pre>
+
+  <h3>Scenario 2: Sub-Folder (Going Down)</h3>
+  <pre>
+&lt;!-- inside index.html --&gt;
+&lt;img src="images/logo.png" alt="My Website Logo"&gt;
+  </pre>
+
+  <h3>Scenario 3: Parent Folder (Going Up)</h3>
+  <pre>
+&lt;!-- inside pages/contact.html --&gt;
+&lt;img src="../images/logo.png" alt="My Website Logo"&gt;
+  </pre>
+
+  <h2 id="absolute">B) Absolute File Paths</h2>
+  <p>
+    An absolute file path gives the full, complete URL to a resource on the web. 
+    Use it only when linking to external resources.
+  </p>
+  <pre>
+&lt;a href="https://www.google.com"&gt;Search on Google&lt;/a&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Html5_logo_and_wordmark.svg" alt="HTML5 Logo"&gt;
+  </pre>
+
+  <h2 id="summary">Summary / Rules of Thumb</h2>
+  <ol>
+    <li>For your own files: <b>Always use relative paths.</b></li>
+    <li>For external files: <b>Always use absolute paths.</b></li>
+  </ol>
+
+  <h2 id="windows">Absolute Path in Windows</h2>
+  <p>
+    Windows paths start with a drive letter like <code>C:\</code> and use backslashes <code>\</code>.
+  </p>
+  <pre>
+C:\Users\JohnDoe\Documents\report.docx
+  </pre>
+
+  <h2 id="macos">Absolute Path in macOS (and Linux)</h2>
+  <p>
+    macOS/Linux paths always start with a forward slash <code>/</code> and use forward slashes to separate folders.
+  </p>
+  <pre>
+/Users/johndoe/Documents/report.docx
+  </pre>
+
+  <h2 id="differences">Summary of Key Differences</h2>
+  <table border="1">
+    <tr>
+      <th>Feature</th>
+      <th>Windows</th>
+      <th>macOS / Linux</th>
+    </tr>
+    <tr>
+      <td>Starting Point (Root)</td>
+      <td>Drive Letter (e.g., C:\)</td>
+      <td>Single Forward Slash (/)</td>
+    </tr>
+    <tr>
+      <td>Directory Separator</td>
+      <td>Backslash (\)</td>
+      <td>Forward Slash (/)</td>
+    </tr>
+    <tr>
+      <td>Example</td>
+      <td>C:\Users\JohnDoe\Documents\report.docx</td>
+      <td>/Users/johndoe/Documents/report.docx</td>
+    </tr>
+  </table>
+
+  <p><a href="../index.html">← Back to Home</a></p>
+</body>
+</html>

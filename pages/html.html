@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Notes</title>
+</head>
+<body>
+      <nav>  
+        <a href="../index.html">Home</a> |
+        <a href="pages/about.html">About Us</a>
+    </nav>
+    <hr>
+    <h1 style="text-align: center;">HTML : Hyper Text Markup Language</h1>
+     <p> <b>Back to Home</b> : <a href="../index.html">home</a></p>
+    <p>
+        HTML stands for <b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage. It is the standard language used to create and structure the content of a webpage.
+    </p>
+    <ul>
+        <li><b>HyperText:</b> This refers to the ability to create links that connect web pages to one another, making the web a connected "web" of information.</li>
+        <li><b>Markup Language:</b> This means you use "tags" to surround your content, giving that content meaning and structure. You are "marking up" a plain text document.</li>
+    </ul>
+    <p>
+        HTML is not a programming language; it is a markup language. It does not have logic or control structures like programming languages do. Instead, it focuses on the structure and presentation of content.
+    </p>
+    <hr>
+    <h2>Basic HTML Tags</h2>
+    Here are some of the most commonly used HTML tags that form the foundation of any webpage:
+    <ol>
+        <li><a href="#heading-notes">The Heading (&lt;h1&gt; to &lt;h6&gt;)</a></li>
+        <li><a href="#paragraph-notes">The Paragraph (&lt;p&gt;)</a></li>
+        <li><a href="#hr-notes">HTML Horizontal Rules</a></li>
+        <li><a href="#br-notes">The Line Break Tag</a></li>
+        <li><a href="#list-notes">List Elements</a></li>
+        <li><a href="#anchor-notes">The Anchor Tag</a></li>
+        <li><a href="#img-notes">The Image Tag</a></li>
+    </ol>
+
+    <hr>
+    <h2 id="heading-notes">1. The Heading (&lt;h1&gt; to &lt;h6&gt;)</h2>
+    <p>
+        <b>What it is:</b> Headings are tags used to define titles and subtitles on your page. They are crucial for creating a logical hierarchy and outline for your content.
+    </p>
+    <pre>
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+    </pre>
+    this will display as: headings of different sizes
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <ul>
+        <li>&lt;h1&gt;: The most important heading, typically used only once per page for the main title.</li>
+        <li>&lt;h2&gt;: A major section heading.</li>
+        <li>&lt;h3&gt;: A sub-section heading under an &lt;h2&gt;.</li>
+        <li>...and so on, down to &lt;h6&gt;, the least important heading.</li>
+    </ul>
+    <p>
+        <b>The Purpose:</b> To structure your document in a way that is understandable to both humans and machines (like search engines and screen readers). It is <b>not</b> just for making text big; it is for giving the text structural importance.
+    </p>
+    <hr>
+
+    <h2 id="paragraph-notes">2. The Paragraph (&lt;p&gt;)</h2>
+    <p>
+        <b>What it is:</b> The paragraph tag is the most common tag you'll use. It's for grouping sentences and blocks of text together.<br>
+        <b>The Tag:</b> &lt;p&gt;<br>
+        <b>The Purpose:</b> To define a distinct paragraph of text. Browsers automatically add a little bit of space before and after a &lt;p&gt; element, separating it from other content. You should not use multiple line breaks; you should use multiple &lt;p&gt; tags.
+    </p>
+    <pre>
+&lt;p&gt;This is the first paragraph. It contains several sentences about a topic.&lt;/p&gt;
+&lt;p&gt;This is a second, separate paragraph. The browser will display it with a space between it and the first one.&lt;/p&gt;
+    </pre>
+    this will display as:
+    <p>This is the first paragraph. It contains several sentences about a topic.</p>
+    <p>This is a second, separate paragraph. The browser will display it with a space between it and the first one.</p>
+    <hr>
+
+    <h2 id="hr-notes">3. HTML Horizontal Rules</h2>
+    <p>
+        The <code>&lt;hr&gt;</code> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.<br>
+        The <code>&lt;hr&gt;</code> element is used to separate content (or define a change) in an HTML page:
+    </p>
+    <pre>
+&lt;p&gt;This is the first topic.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;This is a completely different topic.&lt;/p&gt;
+    </pre>
+
+    <hr>
+
+    <h2 id="br-notes">4. The Line Break Tag: &lt;br&gt;</h2>
+    <p>
+        This tag tells the browser, "Stop writing on this line and immediately start on the next one." It's like hitting the Enter key once in a poem or an address.<br>
+        <b>Purpose:</b> Creates a single line break.
+    </p>
+    <pre>
+&lt;p&gt;221B Baker Street&lt;br&gt;
+London, England&lt;/p&gt;
+    </pre>
+    this will display as:
+    <p>221B Baker Street<br>
+London, England</p>
+
+    <hr>
+
+    <h2 id="list-notes">5. List Elements (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</h2>
+    <p>
+        <b>What it is:</b> These tags are used to create lists. This is a perfect example of nesting.<br>
+        <b>The Tags:</b>
+    </p>
+    <ul>
+        <li>&lt;ul&gt;: An <b>U</b>nordered <b>L</b>ist. It creates a bulleted list.</li>
+        <li>&lt;ol&gt;: An <b>O</b>rdered <b>L</b>ist. It creates a numbered list.</li>
+        <li>&lt;li&gt;: A <b>L</b>ist <b>I</b>tem. Each item in either type of list must be wrapped in an &lt;li&gt; tag.</li>
+    </ul>
+    <p>
+        <b>The Purpose:</b> To group related items together in a list format.<br>
+        <b>Example (Nesting in action):</b>
+    </p>
+    <pre>
+&lt;ul&gt;
+  &lt;li&gt;Tea Bag&lt;/li&gt;
+  &lt;li&gt;Water&lt;/li&gt;
+  &lt;li&gt;Sugar&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+    </pre>
+    <p>This will display as:</p>
+    <ul>
+        <li>Tea Bag</li>
+        <li>Water</li>
+        <li>Sugar</li>
+        <li>Milk</li>
+    </ul>
+<pre>
+&lt;ol&gt;
+  &lt;li&gt;First, boil the water in a kettle.&lt;/li&gt;
+  &lt;li&gt;Add tea bag, sugar and milk into it&lt;/li&gt;
+  &lt;li&gt;Keep boiling it for 5 minutes &lt;/li&gt;
+  &lt;li&gt;Serve the tea by pouring it into cup&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+this will display as:
+    <ol>
+        <li>First, boil the water in a kettle.</li>
+        <li>Add tea bag, sugar and milk into it</li>
+        <li>Keep boiling it for 5 minutes </li>
+        <li>Serve the tea by pouring it into cup</li>
+    </ol>
+    <hr>
+
+    <h2 id="anchor-notes">6. The Anchor Tag (&lt;a&gt;)</h2>
+    <p>
+        <b>What it is:</b> The Anchor tag is what makes the web "hypertext." It is used to create a hyperlink to another webpage, a file, or a location within the same page.<br>
+        <b>The Tag:</b> &lt;a&gt;<br>
+        <b>The Purpose:</b> To make text (or an image) clickable, allowing users to navigate. It requires an <b>attribute</b> called href (hypertext reference) to specify the destination URL.
+    </p>
+    <pre>
+&lt;a href="https://www.coderarmy.in/"&gt;Vist Coder Army&lt;/a&gt;
+    </pre>
+    <p>
+        In this example, "<a href="https://www.coderarmy.in/">Visit Coder Army</a>" is the clickable text that will take you to the specified URL when clicked.
+    </p>
+    <h3>HTML Links - The target Attribute</h3>
+    <p>
+        By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.<br>
+        The <code>target</code> attribute specifies where to open the linked document.<br>
+        The <code>target</code> attribute can have one of the following values:
+    </p>
+    <ul>
+        <li><b>_self</b> - Default. Opens the document in the same window/tab as it was clicked</li>
+        <li><b>_blank</b> - Opens the document in a new window or tab</li>
+    </ul>
+    <hr>
+
+    <h2 id="img-notes">7. The Image Tag (&lt;img&gt;)</h2>
+    <p>
+        <b>What it is:</b> The Image tag is a <b>self-closing tag</b> used to embed an image onto your page.<br>
+        <b>The Tag:</b> &lt;img&gt;<br>
+        <b>The Purpose:</b> To display a visual image. It requires two main attributes:
+    </p>
+    <ul>
+        <li><b>src</b> (source): The path or URL to the image file. This is mandatory.</li>
+        <li><b>alt</b> (alternative text): A description of the image. This is vital for accessibility (screen readers for the visually impaired will read this out) and for when the image fails to load.</li>
+    </ul>
+    <pre>
+&lt;img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" height="300px" width="300px" alt="This is Dog Photo"&gt;
+    </pre>
+    <p>This will display as:</p>
+    <img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" height="300px" width="300px" alt="This is Dog Photo">
+    <hr>
+    <p><a href="../index.html">Back to Home</a></p>
+    
+</body>
+</html>
